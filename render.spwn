@@ -41,10 +41,10 @@ width = 30
 //declaring the array which stores [ray collision block, 
                                 // group for display blocks,
                                 // display block color]
-ray_pairs = []
+let ray_pairs = []
 
 //each index represents the rays at a certain distance
-color = []
+let color = []
 
 //setup function to draw display and raycasting collision blocks
 setup = (width, distance){
@@ -52,7 +52,7 @@ setup = (width, distance){
     // height increment between display slices
     inc = (height-100) / distance
     // goal-height, the height that the sections should reach
-    gh = height
+    let gh = height
     // adds obj in distance that rays target
     add(obj {
         OBJ_ID: display_block,
@@ -83,7 +83,7 @@ setup = (width, distance){
     }
     // adds color for each index
     for i in 0..distance {
-        ray_color = []
+        let ray_color = []
         ghh = height - i*inc
         for j in 0..floor(ghh/15)*2 {
             color_temp = ?c
@@ -95,7 +95,7 @@ setup = (width, distance){
     //loops from width left to right
     for i in -width/2..width/2 {
         // var below stores all info for a given ray and pushes that info to ray_pairs later
-        ray = []
+        let ray = []
         // loops through the distance and creates rays and display at each distance
         for j in 1..distance+1 {
             //allocates the following variables to store ray and display info
