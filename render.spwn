@@ -87,7 +87,7 @@ setup = (width, distance){
         ghh = height - i*inc
         for j in 0..floor(ghh/15)*2 {
             color_temp = ?c
-            color_temp.set(255 - (distance/3)*(i*2), 255 - (distance/3)*(i*2), 255 - (distance/3)*(i*2))
+            color_temp.set(rgb8(255 - (distance/3)*(i*2), 255 - (distance/3)*(i*2), 255 - (distance/3)*(i*2)))
             ray_color.push(color_temp)
         }
         color.push(ray_color)
